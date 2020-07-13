@@ -4,3 +4,4 @@ read -p "Enter a number " b
 read -p "Enter a number " c
 echo "a+b*c = "$(( $a+$b*$c ))
 echo "a*b+c = "$(( $a*$b+$c ))
+echo "c+a/b = "$(( $c+$a/$b ))
