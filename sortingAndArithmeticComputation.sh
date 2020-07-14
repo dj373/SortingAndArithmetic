@@ -7,5 +7,10 @@ computations["a+b*c"]=$(( $a+$b*$c ))
 computations["a*b+c"]=$(( $a*$b+$c ))
 computations["c+a/b"]=$(( $c+$a/$b ))
 computations["a%b+c"]=$(( $a%$b+$c ))
-echo ${!computations[@]}
-echo ${computations[@]}
+declare -a compArray
+itr=0
+for val in ${computations[@]}
+do
+	compArray[(( itr++ ))]=$val
+done
+echo ${compArray[@]}
